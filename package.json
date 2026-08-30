@@ -1,0 +1,28 @@
+{
+  "name": "ecs-fargate-movies-api-blueprint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack Movies application: Express + DynamoDB API, Vue 3 frontend, deployed to ECS Fargate via AWS CDK.",
+  "workspaces": [
+    "apps/api",
+    "apps/web",
+    "infra/cdk",
+    "tests/e2e"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace apps/api",
+    "dev:web": "npm run dev --workspace apps/web",
+    "build": "npm run build --workspaces --if-present",
+    "test:e2e": "npm run test --workspace tests/e2e",
+    "db:local": "docker compose up -d dynamodb-local",
+    "db:create-table": "npm run create-table --workspace apps/api",
+    "db:seed": "npm run seed --workspace apps/api",
+    "cdk:deploy": "npm run deploy --workspace infra/cdk",
+    "cdk:destroy": "npm run destroy --workspace infra/cdk",
+    "test:e2e:api": "npm run test --workspace tests/e2e -- --project=api",
+    "test:e2e:browser": "npm run test --workspace tests/e2e -- --project=chromium"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

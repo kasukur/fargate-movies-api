@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+cdk.out/
+*.tsbuildinfo
+
+# CDK cached context (contains the AWS account id / AZ lookups; regenerated on synth)
+cdk.context.json
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test artifacts
+test-results/
+playwright-report/
+blob-report/
+
+# Draft blog post + its screenshots (not part of the published repo)
+blog.md
+docs/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.log

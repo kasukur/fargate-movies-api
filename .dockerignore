@@ -1,0 +1,29 @@
+# The Docker build context is the repo root for both images. Keep it small and
+# deterministic - CDK hashes the context to decide whether to rebuild an image.
+node_modules
+**/node_modules
+**/dist
+cdk.out
+**/cdk.out
+
+.git
+.gitignore
+.DS_Store
+**/.DS_Store
+
+docs
+*.md
+
+test-results
+**/test-results
+playwright-report
+**/playwright-report
+blob-report
+**/blob-report
+
+.env
+.env.*
+*.log
+.idea
+.vscode
+_to_delete

@@ -1,0 +1,23 @@
+{
+  "name": "@movies/infra",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AWS CDK infrastructure for the Movies app on ECS Fargate",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "synth": "cdk synth",
+    "diff": "cdk diff",
+    "deploy": "cdk deploy --require-approval never",
+    "destroy": "cdk destroy"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.160.0",
+    "constructs": "^10.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.0",
+    "aws-cdk": "^2.160.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
